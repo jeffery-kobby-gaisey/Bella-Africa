@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <title>Contact Us - Bella Africa</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="styles.css?v=4.2.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Bella Africa Logo" class="logo-img">
+                <span class="logo-text">Bella Africa</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="goals.html" class="nav-link">Goals</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="impact.html" class="nav-link">Impact</a></li>
+                <li><a href="volunteer.html" class="nav-link">Get Involved</a></li>
+                <li><a href="education.html" class="nav-link">Learn</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="donate.html" class="nav-link donate-btn">Donate</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="hero contact-hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Get In Touch</h1>
+                <p class="hero-subtitle">Ready to make a difference? We'd love to hear from you!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Ready to make a difference? We'd love to hear from you!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item glass-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p class="contact-text">(352) 430-7019</p>
+                            <p class="contact-note">Available Mon-Fri, 9AM-5PM EST</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item glass-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p class="contact-text">10425 NE, 104th Circle<br>Oxford FL, 34484</p>
+                            <p class="contact-note">Head Office & Operations Center</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item glass-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p class="contact-text">info@bellafrica.org</p>
+                            <p class="contact-note">We respond within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item glass-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Office Hours</h3>
+                            <p class="contact-text">Monday - Friday</p>
+                            <p class="contact-note">9:00 AM - 5:00 PM EST</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div class="contact-form glass-card">
+                        <div class="form-header">
+                            <div class="form-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </div>
+                            <h3>Send us a Message</h3>
+                            <p>Have questions about our projects or want to get involved? We'd love to hear from you!</p>
+                        </div>
+                        
+                        <form id="contactForm" class="modern-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                                    <div class="input-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    <div class="input-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="donation">Donation Question</option>
+                                    <option value="volunteer">Volunteer Opportunity</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                    <option value="project">Project Information</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="input-icon">
+                                    <i class="fas fa-tag"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Tell us how we can help you..." rows="6" required></textarea>
+                                <div class="input-icon">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary submit-btn">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                                <div class="form-note">
+                                    <i class="fas fa-shield-alt"></i>
+                                    Your information is secure and will never be shared
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-cta">
+                <div class="cta-card glass-card">
+                    <div class="cta-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Ready to Make a Difference?</h3>
+                    <p>Join us in empowering women and girls across Africa. Every contribution, no matter how small, creates lasting impact.</p>
+                    <div class="cta-buttons">
+                        <a href="donate.html" class="btn btn-primary">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            Donate Now
+                        </a>
+                        <a href="volunteer.html" class="btn btn-outline">
+                            <i class="fas fa-users"></i>
+                            Volunteer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section map-section">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <div class="map-container glass-card">
+                <div class="map-info">
+                    <h3>Bella Africa Headquarters</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 10425 NE, 104th Circle<br>Oxford FL, 34484</p>
+                    <p><i class="fas fa-phone"></i> (352) 430-7019</p>
+                    <p><i class="fas fa-envelope"></i> info@bellafrica.org</p>
+                    <div class="office-hours">
+                        <h4>Office Hours:</h4>
+                        <p>Monday - Friday: 9:00 AM - 5:00 PM EST</p>
+                        <p>Saturday - Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Interactive Map Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section contact-faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>How can I volunteer with Bella Africa?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can volunteer with us in several ways: field work in Ghana, remote support, skills training, or grant writing. Contact us to learn more about current opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>How do I make a donation?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can donate through our secure PayPal link, or contact us for other donation methods. All donations are tax-deductible as we are a 501(c)(3) organization.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>Can I visit your projects in Ghana?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We welcome visitors to our projects in Ghana. Please contact us in advance to arrange a visit and learn about our current project locations.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item glass-card">
+                    <div class="faq-question">
+                        <h3>How can my organization partner with Bella Africa?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We welcome partnerships with corporations, NGOs, and academic institutions. Contact us to discuss potential collaboration opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-card glass-card">
+                <div class="cta-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Ready to Get Started?</h3>
+                <p>Whether you want to volunteer, donate, partner with us, or just learn more, we're here to help you make a difference.</p>
+                <div class="cta-buttons">
+                    <a href="volunteer.html" class="btn btn-primary">
+                        <i class="fas fa-users"></i>
+                        Volunteer
+                    </a>
+                    <a href="donate.html" class="btn btn-secondary">
+                        <i class="fas fa-heart"></i>
+                        Donate
+                    </a>
+                    <a href="about.html" class="btn btn-outline">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heart"></i> Bella Africa</h3>
+                    <p>Empowering women and transforming families across Africa by mobilizing resources to support women's initiatives and entrepreneurial dreams.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1CTn817pHG/?mibextid=wwXIfr" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7356370703635386368/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@bellaafrica23?_t=ZM-8yUPR4MeUNS&_r=1" target="_blank" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="services.html">Healthcare</a></li>
+                        <li><a href="projects.html">Clean Water</a></li>
+                        <li><a href="services.html">Economic Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +233 538 790 779</li>
+                        <li><i class="fas fa-envelope"></i> info@bellafrica.org</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ghana, West Africa</li>
+                        <li><i class="fas fa-clock"></i> Always Available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023-2026 Bella Africa. All rights reserved.</p>
+                <p><em>"Empowering communities, one life at a time" - Bella Africa</em></p>
+              <p class="designer-credit">Developed and Powered by <strong>Jeffery Kobby Gaisey</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=4.2.0"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html> 
+
+
+
+

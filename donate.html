@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <title>Donate - Bella Africa</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="styles.css?v=4.2.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Bella Africa Logo" class="logo-img">
+                <span class="logo-text">Bella Africa</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="goals.html" class="nav-link">Goals</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="impact.html" class="nav-link">Impact</a></li>
+                <li><a href="volunteer.html" class="nav-link">Get Involved</a></li>
+                <li><a href="education.html" class="nav-link">Learn</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="donate.html" class="nav-link donate-btn active">Donate</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Donate Hero Section -->
+    <section class="hero donate-hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Make a Difference Today</h1>
+                <p class="hero-subtitle">Your donation helps us continue our mission of empowering women and transforming families across Africa</p>
+            </div>
+        </div>
+    </section>
+
+
+
+ 
+
+    <!-- Donation Methods Section -->
+    <section class="section donation-methods">
+        <div class="container">
+            <h2 class="section-title">Ways to Give</h2>
+            <div class="methods-grid">
+                <div class="method-card glass-card">
+                    <div class="method-icon">
+                        <i class="fab fa-paypal"></i>
+                    </div>
+                    <h3>PayPal Donation</h3>
+                    <p>Make a secure online donation through PayPal. Fast, safe, and convenient.</p>
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=DPHU82NS86SSL" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-paypal"></i>
+                        Donate via PayPal
+                    </a>
+                </div>
+                
+                
+                <div class="method-card glass-card">
+                    <div class="method-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>MTN Mobile Money (MoMo)</h3>
+                    <p>Send your donation via MTN Mobile Money. Quick, secure, and convenient for Ghanaian donors.</p>
+                    <button class="btn btn-primary" onclick="showMoMoDetails()">
+                        <i class="fas fa-mobile-alt"></i>
+                        Get MoMo Number
+                    </button>
+                </div>
+                
+                <!-- Zelle -->
+<div class="method-card glass-card">
+    <div class="method-icon">
+        <i class="fas fa-university"></i>
+    </div>
+    <h3>Zelle Donation</h3>
+    <p>Send your donation securely through Zelle using the email below.</p>
+
+    <div class="zelle-email-box">
+        <strong>Email:</strong> bellaafrica23@gmail.com
+    </div>
+
+    <button class="btn btn-primary" onclick="copyZelleEmail()">
+        <i class="fas fa-copy"></i>
+        Copy Zelle Email
+    </button>
+</div>
+
+<script>
+function copyZelleEmail() {
+    navigator.clipboard.writeText("bellaafrica23@gmail.com");
+    alert("Zelle email copied: bellaafrica23@gmail.com");
+}
+</script>
+
+
+
+
+                
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+    <!-- Call to Action -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-card glass-card">
+                <div class="cta-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Every Donation Makes a Difference</h3>
+                <p>Your support directly impacts the lives of women and families across Africa. Join us in creating lasting change and building a brighter future.</p>
+                <div class="cta-buttons">
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=DPHU82NS86SSL" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-heart"></i>
+                        Donate Now
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Us
+                    </a>
+                    <a href="projects.html" class="btn btn-outline">
+                        <i class="fas fa-project-diagram"></i>
+                        View Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heart"></i> Bella Africa</h3>
+                    <p>Empowering women and transforming families across Africa by mobilizing resources to support women's initiatives and entrepreneurial dreams.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1CTn817pHG/?mibextid=wwXIfr" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7356370703635386368/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@bellaafrica23?_t=ZM-8yUPR4MeUNS&_r=1" target="_blank" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="services.html">Healthcare</a></li>
+                        <li><a href="projects.html">Clean Water</a></li>
+                        <li><a href="services.html">Economic Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +233 538 790 779</li>
+                        <li><i class="fas fa-envelope"></i> info@bellaafrica.org</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ghana, West Africa</li>
+                        <li><i class="fas fa-clock"></i> Always Available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023-2026 Bella Africa. All rights reserved.</p>
+                <p><em>"Empowering communities, one life at a time" - Bella Africa</em></p>
+                <p class="designer-credit">Developed and Powered by <strong>Jeffery Kobby Gaisey</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=4.2.0"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html> 
+
+
+
+

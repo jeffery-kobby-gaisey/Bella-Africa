@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <title>Gallery - Bella Africa</title>
+    <meta name="description"
+        content="Explore our photo gallery showcasing Bella Africa's impact, community projects, and success stories across Ghana and West Africa.">
+    <link rel="stylesheet" href="styles.css?v=4.2.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+</head>
+
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Bella Africa Logo" class="logo-img">
+                    <span class="logo-text">Bella Africa</span>
+                </a>
+            </div>
+
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="projects.html" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="goals.html" class="nav-link" role="menuitem">Goals</a></li>
+                <li role="none"><a href="impact.html" class="nav-link" role="menuitem">Impact</a></li>
+                <li role="none"><a href="volunteer.html" class="nav-link" role="menuitem">Get Involved</a></li>
+                <li role="none"><a href="education.html" class="nav-link" role="menuitem">Learn</a></li>
+                <li role="none"><a href="gallery.html" class="nav-link active" role="menuitem">Gallery</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                <li role="none"><a href="donate.html" class="nav-link donate-btn" role="menuitem"
+                        aria-label="Make a donation">Donate</a></li>
+            </ul>
+
+            <div class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section gallery-hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-images"></i>
+                    Photo Gallery
+                </div>
+                <h1>Our Impact in Pictures</h1>
+                <p>Explore our visual journey of transformation, community empowerment, and sustainable development
+                    across Ghana and West Africa.</p>
+
+            </div>
+        </section>
+
+        <!-- Gallery Categories / Project Filters -->
+        <section class="gallery-categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Browse by Project</h2>
+                    <p>Filter our photos by project area to see different aspects of our work</p>
+                </div>
+
+                <div class="category-filters">
+                    <button class="category-card active" onclick="filterGallery('all', event)">
+                        <div class="category-icon"><i class="fas fa-th-large"></i></div>
+                        <div class="category-info">
+                            <h3>All Projects</h3>
+                            <span class="category-count">All Photos</span>
+                        </div>
+                    </button>
+                    <button class="category-card" onclick="filterGallery('sewing', event)">
+                        <div class="category-icon"><i class="fas fa-cut"></i></div>
+                        <div class="category-info">
+                            <h3>Sewing Machine Initiative</h3>
+                            <span class="category-count">Skills &amp; Livelihood</span>
+                        </div>
+                    </button>
+                    
+
+                    <button class="category-card" onclick="filterGallery('salt', event)">
+                        <div class="category-icon"><i class="fas fa-mountain"></i></div>
+                        <div class="category-info">
+                            <h3>Salt Mining</h3>
+                            <span class="category-count">Natural Resources</span>
+                        </div>
+                    </button>
+                    <button class="category-card" onclick="filterGallery('gari', event)">
+                        <div class="category-icon"><i class="fas fa-cog"></i></div>
+                        <div class="category-info">
+                            <h3>Gari Processing Machine</h3>
+                            <span class="category-count">Food Processing</span>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="photo-gallery">
+            <div class="container">
+                <div class="gallery-header">
+                    <h2 id="activeCategory">All Projects</h2>
+                    <div class="gallery-controls">
+                        <button class="btn btn-outline active" onclick="changeLayout('grid', event)">
+                            <i class="fas fa-th"></i> Grid
+                        </button>
+                        <button class="btn btn-outline" onclick="changeLayout('masonry', event)">
+                            <i class="fas fa-th-large"></i> Masonry
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Sewing Machine Initiative -->
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_community_celebration.jpg', 'Community Celebration', 'Women and community members celebrating the Bella Africa Sewing Machine Initiative launch.')">
+                        <img src="images/Gallery/sewing_community_celebration.jpg" alt="Community Celebration"
+                            loading="lazy">
+                    </div>
+
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_machine_handover_1.jpg', 'Sewing Machine Handover', 'Bella Africa presents a sewing machine to a beneficiary at the Women Empowerment event.')">
+                        <img src="images/Gallery/sewing_machine_handover_1.jpg" alt="Sewing Machine Handover"
+                            loading="lazy">
+                    </div>
+
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_machine_handover_2.jpg', 'Women Empowerment Handover', 'Group photo with sewing machine recipient at the Bella Africa Women Empowerment programme.')">
+                        <img src="images/Gallery/sewing_machine_handover_2.jpg" alt="Women Empowerment Handover"
+                            loading="lazy">
+                    </div>
+
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_machine_handover_3.jpg', 'Sewing Machine Presentation', 'Community leaders and Bella Africa team presenting a sewing machine to a beneficiary.')">
+                        <img src="images/Gallery/sewing_machine_handover_3.jpg" alt="Sewing Machine Presentation"
+                            loading="lazy">
+                    </div>
+
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_machine_handover_4.jpg', 'Skills for Livelihood', 'Presenting sewing machines to empower women with sustainable livelihood skills.')">
+                        <img src="images/Gallery/sewing_machine_handover_4.jpg" alt="Skills for Livelihood"
+                            loading="lazy">
+                    </div>
+
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_machine_handover_4.jpg', 'Skills for Livelihood', 'Presenting sewing machines to empower women with sustainable livelihood skills.')">
+                        <img src="images/Gallery/sew 1.jpg" alt="Skills for Livelihood" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_machine_handover_4.jpg', 'Skills for Livelihood', 'Presenting sewing machines to empower women with sustainable livelihood skills.')">
+                        <img src="images/Gallery/sew 2.jpg" alt="Skills for Livelihood" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_machine_handover_4.jpg', 'Skills for Livelihood', 'Presenting sewing machines to empower women with sustainable livelihood skills.')">
+                        <img src="images/Gallery/sew 3.jpg" alt="Skills for Livelihood" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_machine_handover_4.jpg', 'Skills for Livelihood', 'Presenting sewing machines to empower women with sustainable livelihood skills.')">
+                        <img src="images/Gallery/sew 4.jpg" alt="Skills for Livelihood" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_machine_handover_4.jpg', 'Skills for Livelihood', 'Presenting sewing machines to empower women with sustainable livelihood skills.')">
+                        <img src="images/Gallery/sew 5.jpg" alt="Skills for Livelihood" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_machine_handover_4.jpg', 'Skills for Livelihood', 'Presenting sewing machines to empower women with sustainable livelihood skills.')">
+                        <img src="images/Gallery/sew 6.jpg" alt="Skills for Livelihood" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item sewing"
+                        onclick="openLightbox('images/Gallery/sewing_machine_handover_4.jpg', 'Skills for Livelihood', 'Presenting sewing machines to empower women with sustainable livelihood skills.')">
+                        <img src="images/Gallery/sew 7.jpg" alt="Skills for Livelihood" loading="lazy">
+                    </div>
+
+
+
+
+
+
+                    
+
+
+
+
+
+
+
+
+
+                    <!-- Salt Mining -->
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/DSC_0043_edited.jpg', 'Salt Mining Operations', 'Workers engaged in traditional salt mining operations.')">
+                        <img src="images/Gallery/sa.jpeg" alt="Salt Mining Operations" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/DSC_0136_edited.jpg', 'Salt Harvesting', 'Harvesting salt from the mining fields.')">
+                        <img src="images/Gallery/sd.jpeg" alt="Salt Harvesting" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/DSC_0318_edited.jpg', 'Salt Production', 'Salt production and processing activities.')">
+                        <img src="images/Gallery/se.jpeg" alt="Salt Production" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/IMG-20250802-WA0031.jpg', 'Salt Mining Community', 'Salt mining community and livelihoods.')">
+                        <img src="images/Gallery/sre.jpeg" alt="Salt Mining Community" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/IMG-20250802-WA0031.jpg', 'Salt Mining Community', 'Salt mining community and livelihoods.')">
+                        <img src="images/Gallery/sww.jpeg" alt="Salt Mining Community" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/IMG-20250802-WA0031.jpg', 'Salt Mining Community', 'Salt mining community and livelihoods.')">
+                        <img src="images/Gallery/swc.jpeg" alt="Salt Mining Community" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/IMG-20250802-WA0031.jpg', 'Salt Mining Community', 'Salt mining community and livelihoods.')">
+                        <img src="images/Gallery/STJ_1055.jpg" alt="Salt Mining Community" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/IMG-20250802-WA0031.jpg', 'Salt Mining Community', 'Salt mining community and livelihoods.')">
+                        <img src="images/Gallery/STJ_1074.jpg" alt="Salt Mining Community" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/IMG-20250802-WA0031.jpg', 'Salt Mining Community', 'Salt mining community and livelihoods.')">
+                        <img src="images/Gallery/STJ_1075.jpg" alt="Salt Mining Community" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/IMG-20250802-WA0031.jpg', 'Salt Mining Community', 'Salt mining community and livelihoods.')">
+                        <img src="images/Gallery/123.jpg" alt="Salt Mining Community" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/IMG-20250802-WA0031.jpg', 'Salt Mining Community', 'Salt mining community and livelihoods.')">
+                        <img src="images/Gallery/STJ_1064.jpg" alt="Salt Mining Community" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item salt"
+                        onclick="openLightbox('images/Gallery/IMG-20250802-WA0031.jpg', 'Salt Mining Community', 'Salt mining community and livelihoods.')">
+                        <img src="images/Gallery/STJ_1061.jpg" alt="Salt Mining Community" loading="lazy">
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <!-- Gari Processing Machine -->
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_community_1.jpg', 'Gari Machine Launch', 'Community members gathering at the Bella Africa Gari Processing Machine Women Empowerment project launch.')">
+                        <img src="images/Gallery/g.jpeg" alt="Gari Machine Launch" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_community_2.jpg', 'Community Empowerment', 'Community leaders and beneficiaries attending the gari processing machine handover event.')">
+                        <img src="images/Gallery/gari 1.jpg" alt="Community Empowerment" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_presentation.jpg', 'Machine Presentation', 'Bella Africa representative presenting the gari processing machines at the Women Empowerment event.')">
+                        <img src="images/Gallery/gari 2.jpg" alt="Machine Presentation" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_technician.jpg', 'Machine Installation', 'Technician demonstrating the gari processing machine alongside community members at the handover event.')">
+                        <img src="images/Gallery/gari 3.jpg" alt="Machine Installation" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_technician.jpg', 'Machine Installation', 'Technician demonstrating the gari processing machine alongside community members at the handover event.')">
+                        <img src="images/Gallery/gari 4.jpg" alt="Machine Installation" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_technician.jpg', 'Machine Installation', 'Technician demonstrating the gari processing machine alongside community members at the handover event.')">
+                        <img src="images/Gallery/gari 6.jpg" alt="Machine Installation" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_technician.jpg', 'Machine Installation', 'Technician demonstrating the gari processing machine alongside community members at the handover event.')">
+                        <img src="images/Gallery/gari 5.jpg" alt="Machine Installation" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_technician.jpg', 'Machine Installation', 'Technician demonstrating the gari processing machine alongside community members at the handover event.')">
+                        <img src="images/Gallery/gg.jpeg" alt="Machine Installation" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_technician.jpg', 'Machine Installation', 'Technician demonstrating the gari processing machine alongside community members at the handover event.')">
+                        <img src="images/Gallery/gr.jpeg" alt="Machine Installation" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_technician.jpg', 'Machine Installation', 'Technician demonstrating the gari processing machine alongside community members at the handover event.')">
+                        <img src="images/Gallery/gari 8.jpg" alt="Machine Installation" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_technician.jpg', 'Machine Installation', 'Technician demonstrating the gari processing machine alongside community members at the handover event.')">
+                        <img src="images/Gallery/gari 9.jpg" alt="Machine Installation" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item gari"
+                        onclick="openLightbox('images/Gallery/gari_machine_technician.jpg', 'Machine Installation', 'Technician demonstrating the gari processing machine alongside community members at the handover event.')">
+                        <img src="images/Gallery/gari 10.jpg" alt="Machine Installation" loading="lazy">
+                    </div>
+
+
+
+
+
+
+                    <!-- Industrial Machines -->
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/DSC_0165_edited.jpg', 'Industrial Equipment', 'Industrial machines deployed in the community.')">
+                        <img src="images/Gallery/DSC_0165_edited.jpg" alt="Industrial Equipment" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/DSC_0367_edited.jpg', 'Industrial Project Launch', 'Launching the industrial machines project.')">
+                        <img src="images/Gallery/DSC_0367_edited.jpg" alt="Industrial Project Launch" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/DSC_0402_edited.jpg', 'Machine Operations', 'Community members trained to operate industrial machines.')">
+                        <img src="images/Gallery/DSC_0402_edited.jpg" alt="Machine Operations" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/DSC_0424_edited.jpg', 'Youth & Industry', 'Youth engaged with industrial machines for skills development.')">
+                        <img src="images/Gallery/DSC_0424_edited.jpg" alt="Youth & Industry" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/IMG-20250802-WA0030.jpg', 'Industrial Training', 'Training community members on industrial machine use.')">
+                        <img src="images/Gallery/IMG-20250802-WA0030.jpg" alt="Industrial Training" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/IMG-20250802-WA0036.jpg', 'Industrial Impact', 'Industrial machines making an impact in the community.')">
+                        <img src="images/Gallery/IMG-20250802-WA0036.jpg" alt="Industrial Impact" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-7.04.30-am.png', 'Industrial Documentation', 'Documenting industrial machine deployment and outcomes.')">
+                        <img src="images/Gallery/Screenshot-2023-07-08-at-7.04.30-am.png" alt="Industrial Documentation"
+                            loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-12.54.44-pm.png', 'Industrial Progress', 'Tracking progress of the industrial machines project.')">
+                        <img src="images/Gallery/Screenshot-2023-07-08-at-12.54.44-pm.png" alt="Industrial Progress"
+                            loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/STJ_1064.jpg', 'Industrial Machines Team', 'Team managing the industrial machines initiative.')">
+                        <img src="images/Gallery/STJ_1064.jpg" alt="Industrial Machines Team" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/STJ_1065.jpg', 'Machine Maintenance', 'Regular maintenance and upkeep of industrial machines.')">
+                        <img src="images/Gallery/STJ_1065.jpg" alt="Machine Maintenance" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/STJ_1074.jpg', 'Machine Output', 'Products and output from the industrial machines.')">
+                        <img src="images/Gallery/STJ_1074.jpg" alt="Machine Output" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/STJ_1106.jpg', 'Industrial Community', 'Community benefiting from industrial machine access.')">
+                        <img src="images/Gallery/STJ_1106.jpg" alt="Industrial Community" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/STJ_1119.jpg', 'Industrial Growth', 'Industrial growth enabled by the machines project.')">
+                        <img src="images/Gallery/STJ_1119.jpg" alt="Industrial Growth" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-1.03.04-pm.png', 'Industrial Monitoring', 'Monitoring the industrial machines programme.')">
+                        <img src="images/Gallery/Screenshot-2023-07-08-at-1.03.04-pm.png" alt="Industrial Monitoring"
+                            loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-1.04.58-pm.png', 'Industrial Outcomes', 'Outcomes and results of the industrial machines project.')">
+                        <img src="images/Gallery/Screenshot-2023-07-08-at-1.04.58-pm.png" alt="Industrial Outcomes"
+                            loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-1.01.54-pm.png', 'Industrial Programme', 'Industrial machines programme in full operation.')">
+                        <img src="images/Gallery/g.jpeg" alt="Industrial Programme" loading="lazy">
+                    </div>
+
+                    <div class="gallery-item industrial"
+                        onclick="openLightbox('images/Gallery/h1_hero.jpg', 'Industrial Vision', 'The vision behind the industrial machines initiative.')">
+                        <img src="images/Gallery/gg.jpeg" alt="Industrial Vision" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content glass-card">
+                    <div class="cta-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Share Your Story</h3>
+                    <p>Have photos from our community projects? Share them with us and help document our collective
+                        impact.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </a>
+                        <a href="donate.html" class="btn btn-secondary">
+                            <i class="fas fa-heart"></i>
+                            Support Our Work
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+            <button class="lightbox-nav prev" onclick="changeImage(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav next" onclick="changeImage(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heart"></i> Bella Africa</h3>
+                    <p>Empowering communities through sustainable development, education, and healthcare initiatives
+                        across Ghana and West Africa.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Our Projects</a></li>
+                        <li><a href="impact.html">Our Impact</a></li>
+                        <li><a href="volunteer.html">Get Involved</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="services.html">Healthcare</a></li>
+                        <li><a href="projects.html">Community Development</a></li>
+                        <li><a href="goals.html">Sustainable Goals</a></li>
+                        <li><a href="volunteer.html">Volunteer Opportunities</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ghana, West Africa</li>
+                        <li><i class="fas fa-phone"></i> +233 538 790 779</li>
+                        <li><i class="fas fa-envelope"></i> info@bellaafrica.org</li>
+                        <li><i class="fas fa-clock"></i> Always Available</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023-2026 Bella Africa. All rights reserved.</p>
+                <p><em>"Empowering communities, one life at a time" - Bella Africa</em></p>
+                <p class="designer-credit">Developed and Powered by <strong>Jeffery Kobby Gaisey</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=4.2.0"></script>
+    <script>
+        // Gallery specific JavaScript
+        let currentFilter = 'all';
+        let currentLayout = 'grid';
+        let currentImageIndex = 0;
+
+        const categoryNames = {
+            'all': 'All Projects',
+            'sewing': 'Sewing Machine Initiative',
+            'school': 'School Renovation Project',
+            'salt': 'Salt Mining',
+            'gari': 'Gari Processing Machine',
+            'industrial': 'Industrial Machines'
+        };
+
+        function filterGallery(category, event) {
+            currentFilter = category;
+            const items = document.querySelectorAll('.gallery-item');
+
+            // Reset animations for filtered items
+            items.forEach((item, index) => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    item.classList.add('show');
+                    // Add flying animation with delay
+                    item.style.animation = 'none';
+                    item.offsetHeight; // Trigger reflow
+                    item.style.animation = `flyIn 0.8s ease-out ${index * 0.05}s forwards`;
+                } else {
+                    item.style.display = 'none';
+                    item.classList.remove('show');
+                }
+            });
+
+            // Update active category button
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            }
+
+            // Update gallery heading
+            const heading = document.getElementById('activeCategory');
+            if (heading) {
+                heading.textContent = categoryNames[category] || 'Gallery';
+            }
+        }
+
+        function changeLayout(layout, event) {
+            currentLayout = layout;
+            const grid = document.getElementById('galleryGrid');
+
+            if (layout === 'masonry') {
+                grid.classList.add('masonry-layout');
+            } else {
+                grid.classList.remove('masonry-layout');
+            }
+
+            // Update active layout button
+            document.querySelectorAll('.gallery-controls .btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            }
+        }
+
+        function openLightbox(imageSrc, title, description) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const lightboxDescription = document.getElementById('lightbox-description');
+
+            lightboxImage.src = imageSrc;
+            lightboxTitle.textContent = title;
+            lightboxDescription.textContent = description;
+
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+            // Set current image index for navigation
+            const items = Array.from(document.querySelectorAll('.gallery-item')).filter(item => item.style.display !== 'none');
+            currentImageIndex = items.findIndex(item =>
+                item.querySelector('img').src.includes(imageSrc.split('/').pop())
+            );
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        function changeImage(direction) {
+            const items = Array.from(document.querySelectorAll('.gallery-item')).filter(item => item.style.display !== 'none');
+            currentImageIndex = (currentImageIndex + direction + items.length) % items.length;
+
+            const item = items[currentImageIndex];
+            const img = item.querySelector('img');
+            const imgSrc = img.src;
+            // Extract title from alt attribute
+            const title = img.alt || 'Gallery Image';
+            const description = '';
+
+            openLightbox(imgSrc, title, description);
+        }
+
+        // Add flying effect to gallery items on scroll
+        function animateOnScroll() {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach((item, index) => {
+                if (item.style.display === 'none') return;
+                const rect = item.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+                if (isVisible && !item.classList.contains('animated')) {
+                    item.classList.add('animated');
+                    item.style.animation = `flyIn 0.8s ease-out ${index * 0.05}s forwards`;
+                }
+            });
+        }
+
+        // Add floating animation to category cards
+        function animateCategoryCards() {
+            const cards = document.querySelectorAll('.category-card');
+            cards.forEach((card, index) => {
+                card.style.animation = `slideInFromLeft 0.8s ease-out ${index * 0.1}s forwards`;
+            });
+        }
+
+        // Close lightbox when clicking outside
+        document.getElementById('lightbox').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                changeImage(1);
+            } else if (e.key === 'ArrowLeft') {
+                changeImage(-1);
+            }
+        });
+
+        // Initialize gallery with animations
+        document.addEventListener('DOMContentLoaded', function () {
+            // Show all items initially
+            filterGallery('all', null);
+
+            // Animate category cards
+            setTimeout(animateCategoryCards, 300);
+
+            // Add scroll animation for gallery items
+            window.addEventListener('scroll', animateOnScroll);
+
+            // Trigger initial animation
+            setTimeout(animateOnScroll, 200);
+        });
+    </script>
+</body>
+
+</html>

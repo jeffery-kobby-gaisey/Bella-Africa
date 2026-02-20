@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <title>Get Involved - Bella Africa</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="styles.css?v=4.2.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Bella Africa Logo" class="logo-img">
+                <span class="logo-text">Bella Africa</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="goals.html" class="nav-link">Goals</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="impact.html" class="nav-link">Impact</a></li>
+                <li><a href="volunteer.html" class="nav-link active">Get Involved</a></li>
+                <li><a href="education.html" class="nav-link">Learn</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="donate.html" class="nav-link donate-btn">Donate</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Volunteer Hero Section -->
+    <section class="hero volunteer-hero">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Get Involved</h1>
+                <p class="hero-subtitle">Join Our Mission to Empower Women and Transform Communities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer & Partnership Section -->
+    <section class="section volunteer-partnership">
+        <div class="container">
+            <h2 class="section-title">Get Involved</h2>
+            <div class="involvement-grid">
+                <div class="volunteer-section glass-card">
+                    <div class="section-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Volunteer Opportunities</h3>
+                    <p>Join our mission on the ground in Africa or support us remotely. We need passionate individuals with various skills.</p>
+                    
+                    <div class="opportunity-list">
+                        <div class="opportunity-item">
+                            <i class="fas fa-plane"></i>
+                            <div>
+                                <h4>Field Work in Ghana</h4>
+                                <p>Direct project implementation, community assessment, and skills training</p>
+                            </div>
+                        </div>
+                        <div class="opportunity-item">
+                            <i class="fas fa-laptop"></i>
+                            <div>
+                                <h4>Remote Support</h4>
+                                <p>Grant writing, social media, website development, and administrative support</p>
+                            </div>
+                        </div>
+                        <div class="opportunity-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <div>
+                                <h4>Skills Training</h4>
+                                <p>Teaching sewing, business skills, and entrepreneurship to local women</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="openVolunteerForm()">Apply to Volunteer</button>
+                </div>
+                
+                <div class="partnership-section glass-card">
+                    <div class="section-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partnership Opportunities</h3>
+                    <p>Partner with us to create lasting change. We welcome organizations, businesses, and individuals who share our vision.</p>
+                    
+                    <div class="partnership-types">
+                        <div class="partnership-type">
+                            <h4>Corporate Partnerships</h4>
+                            <p>CSR initiatives, employee volunteering, and sustainable development projects</p>
+                        </div>
+                        <div class="partnership-type">
+                            <h4>NGO Collaborations</h4>
+                            <p>Joint projects, resource sharing, and capacity building</p>
+                        </div>
+                        <div class="partnership-type">
+                            <h4>Academic Partnerships</h4>
+                            <p>Research collaborations, student programs, and knowledge exchange</p>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-secondary" onclick="openPartnershipForm()">Become a Partner</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Roles Section -->
+    <section class="section volunteer-roles">
+        <div class="container">
+            <h2 class="section-title">Volunteer Roles & Opportunities</h2>
+            <div class="roles-grid">
+                <div class="role-card glass-card">
+                    <div class="role-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Field Volunteers</h3>
+                    <p>Join us on the ground in Africa for hands-on project implementation and community engagement.</p>
+                    <div class="role-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ghana, Kenya, Tanzania</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>2 weeks - 6 months</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Community Development</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+                
+                <div class="role-card glass-card">
+                    <div class="role-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Remote Volunteers</h3>
+                    <p>Support our mission from anywhere in the world through virtual volunteering opportunities.</p>
+                    <div class="role-details">
+                        <div class="detail-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Remote/Online</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Flexible hours</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Administrative Support</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+                
+                <div class="role-card glass-card">
+                    <div class="role-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Skills Trainers</h3>
+                    <p>Share your expertise in sewing, business, technology, or other skills with women in our programs.</p>
+                    <div class="role-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ghana & Remote</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>1-3 months</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Skills Training</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+                
+                <div class="role-card glass-card">
+                    <div class="role-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Grant Writers</h3>
+                    <p>Help us secure funding for our projects by writing compelling grant proposals and funding applications.</p>
+                    <div class="role-details">
+                        <div class="detail-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Remote/Online</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Project-based</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <span>Fundraising</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Types Section -->
+    <section class="section partnership-types">
+        <div class="container">
+            <h2 class="section-title">Partnership Opportunities</h2>
+            <div class="partnership-grid">
+                <div class="partnership-card glass-card">
+                    <div class="partnership-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Partnerships</h3>
+                    <p>Partner with us through CSR initiatives, employee volunteering programs, and sustainable development projects.</p>
+                    <div class="partnership-benefits">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Employee engagement opportunities</li>
+                            <li>Positive brand association</li>
+                            <li>Measurable social impact</li>
+                            <li>Tax benefits</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary">Partner With Us</button>
+                </div>
+                
+                <div class="partnership-card glass-card">
+                    <div class="partnership-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>NGO Collaborations</h3>
+                    <p>Join forces with other organizations to maximize our impact and reach more communities across Africa.</p>
+                    <div class="partnership-benefits">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Resource sharing</li>
+                            <li>Joint project implementation</li>
+                            <li>Capacity building</li>
+                            <li>Expanded reach</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary">Collaborate</button>
+                </div>
+                
+                <div class="partnership-card glass-card">
+                    <div class="partnership-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Academic Partnerships</h3>
+                    <p>Work with universities and research institutions to develop evidence-based programs and measure impact.</p>
+                    <div class="partnership-benefits">
+                        <h4>Benefits:</h4>
+                        <ul>
+                            <li>Research opportunities</li>
+                            <li>Student programs</li>
+                            <li>Knowledge exchange</li>
+                            <li>Impact evaluation</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary">Partner With Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Stories Section -->
+    <section class="section volunteer-stories">
+        <div class="container">
+            <h2 class="section-title">Volunteer Stories</h2>
+            <div class="stories-grid">
+                <div class="story-card glass-card">
+                    <div class="story-image">
+                        <img src="images/Gallery/DSC_0367_edited.jpg" alt="Volunteer Story">
+                    </div>
+                    <div class="story-content">
+                        <h4>Maria's Experience</h4>
+                        <p>"Volunteering with Bella Africa in Ghana was life-changing. I taught sewing skills to 20 women, and seeing their confidence grow was incredible. They're now running their own businesses!"</p>
+                        <div class="story-meta">
+                            <span class="story-role">Skills Trainer</span>
+                            <span class="story-duration">3 months</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card glass-card">
+                    <div class="story-image">
+                        <img src="images/Gallery/DSC_0402_edited.jpg" alt="Volunteer Story">
+                    </div>
+                    <div class="story-content">
+                        <h4>John's Remote Support</h4>
+                        <p>"As a remote volunteer, I help with grant writing and social media. It's amazing to see how my skills can make a difference from thousands of miles away."</p>
+                        <div class="story-meta">
+                            <span class="story-role">Grant Writer</span>
+                            <span class="story-duration">6 months</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-card glass-card">
+                <div class="cta-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Ready to Make a Difference?</h3>
+                <p>Join our community of volunteers and partners who are committed to empowering women and transforming communities across Africa.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Us
+                    </a>
+                    <a href="donate.html" class="btn btn-secondary">
+                        <i class="fas fa-heart"></i>
+                        Support Our Work
+                    </a>
+                    <a href="about.html" class="btn btn-outline">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heart"></i> Bella Africa</h3>
+                    <p>Empowering women and transforming families across Africa by mobilizing resources to support women's initiatives and entrepreneurial dreams.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1CTn817pHG/?mibextid=wwXIfr" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7356370703635386368/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@bellaafrica23?_t=ZM-8yUPR4MeUNS&_r=1" target="_blank" class="social-link">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="services.html">Healthcare</a></li>
+                        <li><a href="projects.html">Clean Water</a></li>
+                        <li><a href="services.html">Economic Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +233 538 790 779</li>
+                        <li><i class="fas fa-envelope"></i> info@bellaafrica.org</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ghana, West Africa</li>
+                        <li><i class="fas fa-clock"></i> Always Available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bella Africa. All rights reserved.</p>
+                <p><em>"Empowering communities, one life at a time" - Bella Africa</em></p>
+                <p class="designer-credit">Developed and Powered by <strong>Jeffery Kobby Gaisey</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=4.2.0"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html> 
+
+
+
+

@@ -1,0 +1,477 @@
+// Bella Africa Chatbot - Standalone JavaScript
+// Add this to any page to include the chatbot functionality
+
+(function() {
+    'use strict';
+    
+    // Create chatbot HTML structure
+    function createChatbotHTML() {
+        const chatbotHTML = `
+            <div class="chatbot-container">
+                <button class="chatbot-toggle" id="chatbotToggle">
+                    <i class="fas fa-comments"></i>
+                </button>
+                
+                <div class="chatbot-window" id="chatbotWindow">
+                    <div class="chatbot-header">
+                        <h3>
+                            <i class="fas fa-robot"></i>
+                            Bella Africa Assistant
+                        </h3>
+                        <button class="chatbot-close" id="chatbotClose">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="chatbot-messages" id="chatbotMessages">
+                        <!-- Messages will be added here -->
+                    </div>
+                    
+                    <div class="chatbot-input">
+                        <input type="text" id="chatbotInput" placeholder="Type your message..." maxlength="200">
+                        <button class="chatbot-send" id="chatbotSend">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        document.body.insertAdjacentHTML('beforeend', chatbotHTML);
+    }
+    
+    // Create chatbot CSS styles
+    function createChatbotCSS() {
+        const chatbotCSS = `
+            <style>
+                .chatbot-container {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    z-index: 1000;
+                    font-family: 'Arial', sans-serif;
+                }
+
+                .chatbot-toggle {
+                    width: 60px;
+                    height: 60px;
+                    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+                    border: none;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 24px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                    transition: all 0.3s ease;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .chatbot-toggle:hover {
+                    transform: scale(1.1);
+                    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+                }
+
+                .chatbot-window {
+                    position: absolute;
+                    bottom: 80px;
+                    right: 0;
+                    width: 350px;
+                    height: 500px;
+                    background: white;
+                    border-radius: 15px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                    display: none;
+                    flex-direction: column;
+                    overflow: hidden;
+                }
+
+                .chatbot-header {
+                    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+                    color: white;
+                    padding: 15px 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .chatbot-header h3 {
+                    margin: 0;
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                .chatbot-close {
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 18px;
+                    cursor: pointer;
+                    padding: 5px;
+                }
+
+                .chatbot-messages {
+                    flex: 1;
+                    padding: 20px;
+                    overflow-y: auto;
+                    background: #f8f9fa;
+                }
+
+                .message {
+                    margin-bottom: 15px;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 10px;
+                }
+
+                .message.user {
+                    flex-direction: row-reverse;
+                }
+
+                .message-avatar {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 14px;
+                    color: white;
+                }
+
+                .message.user .message-avatar {
+                    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+                }
+
+                .message.bot .message-avatar {
+                    background: linear-gradient(135deg, #74b9ff, #0984e3);
+                }
+
+                .message-content {
+                    max-width: 70%;
+                    padding: 12px 16px;
+                    border-radius: 18px;
+                    font-size: 14px;
+                    line-height: 1.4;
+                }
+
+                .message.user .message-content {
+                    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+                    color: white;
+                    border-bottom-right-radius: 5px;
+                }
+
+                .message.bot .message-content {
+                    background: white;
+                    color: #333;
+                    border: 1px solid #e1e8ed;
+                    border-bottom-left-radius: 5px;
+                }
+
+                .chatbot-input {
+                    padding: 15px 20px;
+                    border-top: 1px solid #e1e8ed;
+                    background: white;
+                    display: flex;
+                    gap: 10px;
+                }
+
+                .chatbot-input input {
+                    flex: 1;
+                    padding: 10px 15px;
+                    border: 1px solid #e1e8ed;
+                    border-radius: 25px;
+                    outline: none;
+                    font-size: 14px;
+                }
+
+                .chatbot-input input:focus {
+                    border-color: #ff6b6b;
+                }
+
+                .chatbot-send {
+                    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+                    border: none;
+                    color: white;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.3s ease;
+                }
+
+                .chatbot-send:hover {
+                    transform: scale(1.1);
+                }
+
+                .quick-replies {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    margin-top: 10px;
+                }
+
+                .quick-reply {
+                    background: white;
+                    border: 1px solid #e1e8ed;
+                    border-radius: 15px;
+                    padding: 8px 12px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+
+                .quick-reply:hover {
+                    background: #ff6b6b;
+                    color: white;
+                    border-color: #ff6b6b;
+                }
+
+                .typing-indicator {
+                    display: none;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 10px;
+                }
+
+                .typing-dot {
+                    width: 8px;
+                    height: 8px;
+                    background: #ccc;
+                    border-radius: 50%;
+                    animation: typing 1.4s infinite;
+                }
+
+                .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+                .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+                @keyframes typing {
+                    0%, 60%, 100% { transform: translateY(0); }
+                    30% { transform: translateY(-10px); }
+                }
+
+                @media (max-width: 768px) {
+                    .chatbot-window {
+                        width: 300px;
+                        height: 400px;
+                        right: 0;
+                    }
+                }
+            </style>
+        `;
+        
+        document.head.insertAdjacentHTML('beforeend', chatbotCSS);
+    }
+    
+    // Chatbot functionality
+    class BellaAfricaChatbot {
+        constructor() {
+            this.messages = [];
+            this.isOpen = false;
+            this.typingTimeout = null;
+            
+            // Create HTML and CSS
+            createChatbotHTML();
+            createChatbotCSS();
+            
+            // DOM elements
+            this.toggle = document.getElementById('chatbotToggle');
+            this.window = document.getElementById('chatbotWindow');
+            this.messages = document.getElementById('chatbotMessages');
+            this.input = document.getElementById('chatbotInput');
+            this.send = document.getElementById('chatbotSend');
+            this.close = document.getElementById('chatbotClose');
+            
+            this.init();
+        }
+        
+        init() {
+            // Event listeners
+            this.toggle.addEventListener('click', () => this.toggleChat());
+            this.close.addEventListener('click', () => this.closeChat());
+            this.send.addEventListener('click', () => this.sendMessage());
+            this.input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') this.sendMessage();
+            });
+            
+            // Show welcome message
+            this.addBotMessage("Hello! I'm Bella Africa's assistant. How can I help you today? 😊", [
+                "What is Bella Africa?",
+                "How can I donate?",
+                "Tell me about your projects",
+                "Contact information"
+            ]);
+        }
+        
+        toggleChat() {
+            this.isOpen = !this.isOpen;
+            this.window.style.display = this.isOpen ? 'flex' : 'none';
+            if (this.isOpen) {
+                this.input.focus();
+            }
+        }
+        
+        closeChat() {
+            this.isOpen = false;
+            this.window.style.display = 'none';
+        }
+        
+        sendMessage() {
+            const message = this.input.value.trim();
+            if (!message) return;
+            
+            this.addUserMessage(message);
+            this.input.value = '';
+            this.processMessage(message);
+        }
+        
+        addUserMessage(text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message user';
+            messageDiv.innerHTML = `
+                <div class="message-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="message-content">${this.escapeHtml(text)}</div>
+            `;
+            this.messages.appendChild(messageDiv);
+            this.scrollToBottom();
+        }
+        
+        addBotMessage(text, quickReplies = []) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message bot';
+            
+            let quickRepliesHtml = '';
+            if (quickReplies.length > 0) {
+                quickRepliesHtml = `
+                    <div class="quick-replies">
+                        ${quickReplies.map(reply => 
+                            `<div class="quick-reply" onclick="window.bellaAfricaChatbot.handleQuickReply('${reply}')">${reply}</div>`
+                        ).join('')}
+                    </div>
+                `;
+            }
+            
+            messageDiv.innerHTML = `
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    ${this.escapeHtml(text)}
+                    ${quickRepliesHtml}
+                </div>
+            `;
+            this.messages.appendChild(messageDiv);
+            this.scrollToBottom();
+        }
+        
+        handleQuickReply(reply) {
+            this.addUserMessage(reply);
+            this.processMessage(reply);
+        }
+        
+        showTyping() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message bot typing-indicator';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerHTML = `
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                </div>
+            `;
+            this.messages.appendChild(typingDiv);
+            this.scrollToBottom();
+        }
+        
+        hideTyping() {
+            const typingIndicator = document.getElementById('typingIndicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+        
+        processMessage(message) {
+            this.showTyping();
+            
+            // Simulate typing delay
+            setTimeout(() => {
+                this.hideTyping();
+                this.generateResponse(message.toLowerCase());
+            }, 1000 + Math.random() * 1000);
+        }
+        
+        generateResponse(message) {
+            let response = '';
+            let quickReplies = [];
+            
+            if (message.includes('what is bella africa') || message.includes('about') || message.includes('who')) {
+                response = "Bella Africa is a 501(c)(3) nonprofit organization dedicated to empowering women and transforming families across Africa. We focus on providing resources, education, and support for women's initiatives and entrepreneurial dreams. Our mission is to create sustainable change through community development projects.";
+                quickReplies = ["What projects do you have?", "How can I help?", "Where are you located?"];
+            }
+            else if (message.includes('donate') || message.includes('give') || message.includes('support')) {
+                response = "Thank you for wanting to support our mission! You can donate through our secure donation page. Every contribution helps us empower more women and transform communities. We accept various payment methods and all donations are tax-deductible.";
+                quickReplies = ["Visit donation page", "What does my donation fund?", "Other ways to help"];
+            }
+            else if (message.includes('project') || message.includes('program')) {
+                response = "We have several key projects: 1) Sewing Machine Initiative - providing women with tools to start businesses, 2) School Renovation Projects - improving educational facilities, 3) Community Building Programs - fostering local partnerships, and 4) Food Processing Projects - supporting sustainable agriculture.";
+                quickReplies = ["Tell me more about sewing machines", "School renovation details", "How to get involved"];
+            }
+            else if (message.includes('contact') || message.includes('phone') || message.includes('email')) {
+                response = "You can reach us at: 📞 Phone: (352) 430-7019 📧 Email: info@bellafrica.org 📍 Address: 10425 NE, 104th Circle, Oxford FL, 34484 🌐 Website: bellafrica.org";
+                quickReplies = ["Send us a message", "Visit our website", "Follow us on social media"];
+            }
+            else if (message.includes('volunteer') || message.includes('help') || message.includes('involve')) {
+                response = "There are many ways to get involved! You can volunteer your time, skills, or resources. We welcome volunteers for various projects and always appreciate community support. Check out our volunteer page for current opportunities.";
+                quickReplies = ["Volunteer opportunities", "Skills needed", "Contact us"];
+            }
+            else if (message.includes('location') || message.includes('where') || message.includes('ghana')) {
+                response = "We work primarily in Ghana, focusing on rural communities and women's empowerment initiatives. Our main office is in Florida, USA, but our impact extends across multiple regions in Ghana where we implement our projects.";
+                quickReplies = ["Projects in Ghana", "Community locations", "Visit our projects"];
+            }
+            else if (message.includes('sewing') || message.includes('machine')) {
+                response = "Our Sewing Machine Initiative has empowered 50+ women by providing them with sewing machines and training. This program helps women start their own tailoring businesses, creating sustainable income and economic independence for their families.";
+                quickReplies = ["Success stories", "How to donate machines", "Training programs"];
+            }
+            else if (message.includes('school') || message.includes('education')) {
+                response = "Our school renovation projects transform dilapidated facilities into modern learning environments. We've renovated multiple schools, increasing student attendance by 80% and creating safe, supportive spaces for 200+ children to learn and grow.";
+                quickReplies = ["Before and after photos", "Current projects", "Education impact"];
+            }
+            else {
+                response = "I'm here to help! You can ask me about Bella Africa's mission, our projects, how to donate, volunteer opportunities, or contact information. What would you like to know more about?";
+                quickReplies = ["What is Bella Africa?", "How can I donate?", "Tell me about projects", "Contact information"];
+            }
+            
+            this.addBotMessage(response, quickReplies);
+        }
+        
+        scrollToBottom() {
+            this.messages.scrollTop = this.messages.scrollHeight;
+        }
+        
+        escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    }
+    
+    // Initialize chatbot when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+        window.bellaAfricaChatbot = new BellaAfricaChatbot();
+    });
+    
+})(); 

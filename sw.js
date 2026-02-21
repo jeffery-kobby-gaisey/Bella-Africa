@@ -5,12 +5,12 @@ const urlsToCache = [
     '/styles.css',
     '/script.js',
     '/images/logo.jpg',
-    '/images/Gallery/h1_hero.jpg',
-    '/images/Gallery/DSC_0424_edited.jpg',
-    '/images/Gallery/DSC_0402_edited.jpg',
-    '/images/Gallery/DSC_0367_edited.jpg',
-    '/images/Gallery/DSC_0318_edited.jpg',
-    '/images/Gallery/cause-4.jpg',
+    '/images/gallery/h1_hero.jpg',
+    '/images/gallery/dsc_0424_edited.jpg',
+    '/images/gallery/dsc_0402_edited.jpg',
+    '/images/gallery/dsc_0367_edited.jpg',
+    '/images/gallery/dsc_0318_edited.jpg',
+    '/images/gallery/cause-4.jpg',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'
 ];
 

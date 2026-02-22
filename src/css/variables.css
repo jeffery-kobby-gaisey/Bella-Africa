@@ -31,6 +31,11 @@
   --color-gray-800: #1f2937;
   --color-gray-900: #111827;
   
+  /* Text Colors */
+  --color-text-primary: #2c3e50;
+  --color-text-secondary: #5a6c7d;
+  --color-text-muted: #7f8c8d;
+  
   /* Semantic Colors */
   --color-success: #27ae60;
   --color-error: #e74c3c;

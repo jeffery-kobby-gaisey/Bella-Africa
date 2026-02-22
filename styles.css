@@ -68,7 +68,7 @@ html {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333333;
+    color: #2c3e50;
     overflow-x: hidden;
     background: #f8f9fa;
     min-height: 100vh;
@@ -81,7 +81,7 @@ body {
 
 .article-btn {
     display: inline-block;
-    background: #333333; /* Bella Africa pink tone */
+    background: #34495e;
     color: #fff;
     padding: 12px 20px;
     border-radius: 6px;
@@ -92,7 +92,7 @@ body {
 }
 
 .article-btn:hover {
-    background: #333333;
+    background: #2c3e50;
     transform: translateY(-2px);
 }
 
@@ -139,7 +139,7 @@ body {
 }
 
 .hero-badge span {
-    color: #333333;
+    color: #2c3e50;
     font-weight: 700;
     font-size: 0.85rem;
     text-transform: uppercase;
@@ -252,7 +252,7 @@ body {
 }
 
 .stat-label {
-    color: #555;
+    color: #5a6c7d;
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -266,7 +266,7 @@ body {
 
 .section-subtitle {
     font-size: 1.2rem;
-    color: rgba(0, 0, 0, 0.7);
+    color: #5a6c7d;
     margin-top: 0.5rem;
     max-width: 600px;
     margin-left: auto;
@@ -637,7 +637,7 @@ body {
 }
 
 .reason-card h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -724,7 +724,7 @@ body {
 
 .donation-impact h3 {
     text-align: center;
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
 }
@@ -763,7 +763,7 @@ body {
 
 .donation-options h3 {
     text-align: center;
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
 }
@@ -779,7 +779,7 @@ body {
 .donation-btn.custom {
     background: rgba(0, 0, 0, 0.05);
     border: 2px solid rgba(255, 255, 255, 0.3);
-    color: #333333;
+    color: #2c3e50;
 }
 
 .donation-btn.custom:hover {
@@ -836,7 +836,7 @@ body {
 }
 
 .intro-text h3 {
-    color: #333333;
+    color: #2c3e50;
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
@@ -949,7 +949,7 @@ body {
 }
 
 .story-highlight h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -975,7 +975,7 @@ body {
     display: block;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333333;
+    color: #2c3e50;
 }
 
 .story-stat .stat-label {
@@ -1033,7 +1033,7 @@ body {
 }
 
 .metric-label {
-    color: #333333;
+    color: #2c3e50;
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
@@ -1081,7 +1081,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: #333;
+    color: #2c3e50;
     font-size: 1.2rem;
 }
 
@@ -1099,7 +1099,7 @@ body {
 }
 
 .process-step h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -1209,7 +1209,7 @@ body {
 }
 
 .timeline-content h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -1306,7 +1306,7 @@ body {
 }
 
 .voice-author h4 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
@@ -1373,7 +1373,7 @@ body {
 }
 
 .cta-sidebar h4 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -1405,7 +1405,7 @@ body {
 }
 
 .video-description h4 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
@@ -1506,7 +1506,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: #2c3e50;
     font-weight: 500;
     font-size: 0.95rem;
     transition: all 0.3s ease;
@@ -1834,7 +1834,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #333333;
+    color: #2c3e50;
 }
 
 /* Button Styles */
@@ -1875,7 +1875,7 @@ body {
 
 .btn-secondary {
     background: rgba(255, 255, 255, 0.95);
-    color: #333333;
+    color: #2c3e50;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -2025,7 +2025,7 @@ body {
 }
 
 .about-text h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.8rem;
 }
@@ -2046,7 +2046,7 @@ body {
 }
 
 .ceo-quote i {
-    color: #333333;
+    color: #2c3e50;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     display: block;
@@ -2054,7 +2054,7 @@ body {
 
 .ceo-quote p {
     font-style: italic;
-    color: #333333;
+    color: #2c3e50;
     font-weight: 500;
     margin: 0;
 }
@@ -2151,7 +2151,7 @@ body {
     display: block;
     font-size: 2rem;
     font-weight: bold;
-    color: #333333;
+    color: #2c3e50;
 }
 
 .stat-label {
@@ -2184,7 +2184,7 @@ body {
 }
 
 .impact-card h4 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
 }
 
@@ -2196,7 +2196,7 @@ body {
 }
 
 .video-link {
-    color: #333333;
+    color: #2c3e50;
     text-decoration: none;
     font-weight: 500;
     display: inline-flex;
@@ -2279,7 +2279,7 @@ body {
 }
 
 .update-card h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -2303,7 +2303,7 @@ body {
 }
 
 .update-stats i {
-    color: #333333;
+    color: #2c3e50;
 }
 
 /* Projects Grid */
@@ -2345,7 +2345,7 @@ body {
 }
 
 .project-content h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -2364,7 +2364,7 @@ body {
 }
 
 .detail-item i {
-    color: #333333;
+    color: #2c3e50;
     width: 20px;
 }
 
@@ -2385,7 +2385,7 @@ body {
     top: 1rem;
     right: 1rem;
     background: linear-gradient(45deg, #27ae60, #2ecc71);
-    color: #333333;
+    color: #2c3e50;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -2396,7 +2396,7 @@ body {
 }
 
 .completed-card h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.3rem;
     padding-right: 100px;
@@ -2448,7 +2448,7 @@ body {
 
 .event-date {
     background: linear-gradient(45deg, #0077B6, #00a8e8);
-    color: #333333;
+    color: #2c3e50;
     padding: 1rem;
     border-radius: 15px;
     text-align: center;
@@ -2467,7 +2467,7 @@ body {
 }
 
 .event-content h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 0.5rem;
 }
 
@@ -2514,7 +2514,7 @@ body {
     top: 10px;
     right: 10px;
     background: rgba(0, 0, 0, 0.7);
-    color: #333333;
+    color: #2c3e50;
     padding: 5px 8px;
     border-radius: 50%;
     font-size: 0.8rem;
@@ -2543,7 +2543,7 @@ body {
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     border: none;
-    color: #333;
+    color: #2c3e50;
     padding: 1rem;
     cursor: pointer;
     border-radius: 50%;
@@ -2648,7 +2648,7 @@ body {
 }
 
 .contact-item h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
     font-weight: 600;
@@ -2705,12 +2705,12 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    color: #333333;
+    color: #2c3e50;
     font-size: 2rem;
 }
 
 .form-header h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.8rem;
     font-weight: 600;
@@ -2755,7 +2755,7 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     background: rgba(0, 0, 0, 0.03);
-    color: #333333;
+    color: #2c3e50;
     font-size: 1rem;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
@@ -2781,7 +2781,7 @@ body {
 
 .form-group select option {
     background: #1a1a1a;
-    color: #333333;
+    color: #2c3e50;
 }
 
 /* Form validation styles */
@@ -2917,7 +2917,7 @@ button[aria-busy="true"]::after {
 }
 
 .cta-card h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 2rem;
     font-weight: 600;
@@ -2987,7 +2987,7 @@ button[aria-busy="true"]::after {
 }
 
 .project-highlight-card h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.4rem;
 }
@@ -3653,7 +3653,7 @@ button[aria-busy="true"]::after {
         padding: 1.2rem 2rem;
         font-size: 1.1rem;
         font-weight: 500;
-        color: #333;
+        color: #2c3e50;
         transition: all 0.3s ease;
         border-radius: 0;
         min-height: 48px;
@@ -3664,7 +3664,7 @@ button[aria-busy="true"]::after {
     
     .nav-link:hover {
         background: rgba(44, 90, 160, 0.1);
-        color: #333333;
+        color: #2c3e50;
     }
     
     .nav-link::after {
@@ -4324,7 +4324,7 @@ button[aria-busy="true"]::after {
 .metric-label {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 0.5rem;
 }
 
@@ -4336,7 +4336,7 @@ button[aria-busy="true"]::after {
 .success-stories h3 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #333333;
+    color: #2c3e50;
     font-size: 2rem;
 }
 
@@ -4374,7 +4374,7 @@ button[aria-busy="true"]::after {
 }
 
 .story-content h4 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -4424,7 +4424,7 @@ button[aria-busy="true"]::after {
 .volunteer-section h3,
 .partnership-section h3 {
     text-align: center;
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.8rem;
 }
@@ -4458,7 +4458,7 @@ button[aria-busy="true"]::after {
 }
 
 .opportunity-item h4 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
@@ -4481,7 +4481,7 @@ button[aria-busy="true"]::after {
 }
 
 .partnership-type h4 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
@@ -4527,7 +4527,7 @@ button[aria-busy="true"]::after {
 }
 
 .service-card h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -4583,7 +4583,7 @@ button[aria-busy="true"]::after {
 }
 
 .goals-content h3 {
-    color: #333333;
+    color: #2c3e50;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -4631,7 +4631,7 @@ button[aria-busy="true"]::after {
 }
 
 .goal-item h4 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -4643,7 +4643,7 @@ button[aria-busy="true"]::after {
 }
 
 .goals-impact h4 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1.5rem;
     font-size: 1.3rem;
 }
@@ -4699,7 +4699,7 @@ button[aria-busy="true"]::after {
 }
 
 .education-card h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -4744,7 +4744,7 @@ button[aria-busy="true"]::after {
 
 .transparency-info h3,
 .impact-per-dollar h3 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 2rem;
     font-size: 1.8rem;
     text-align: center;
@@ -4796,7 +4796,7 @@ button[aria-busy="true"]::after {
 }
 
 .tax-info h4 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -4933,7 +4933,7 @@ button[aria-busy="true"]::after {
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     background: #f8f9fa;
-    color: #333333;
+    color: #2c3e50;
     font-size: 1rem;
 }
 
@@ -4946,7 +4946,7 @@ button[aria-busy="true"]::after {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #333333;
+    color: #2c3e50;
     font-size: 0.9rem;
     cursor: pointer;
 }
@@ -4992,7 +4992,7 @@ button[aria-busy="true"]::after {
     right: 0;
     background: rgba(0, 0, 0, 0.1);
     border: none;
-    color: #333333;
+    color: #2c3e50;
     font-size: 2rem;
     width: 40px;
     height: 40px;
@@ -5229,7 +5229,7 @@ button[aria-busy="true"]::after {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #333333;
+    color: #2c3e50;
 }
 
 .gallery-categories {
@@ -5360,7 +5360,7 @@ button[aria-busy="true"]::after {
     justify-content: center;
     margin: 0 auto 1.5rem;
     font-size: 2rem;
-    color: #333333;
+    color: #2c3e50;
 }
 
 .category-card h3 {
@@ -5457,7 +5457,7 @@ button[aria-busy="true"]::after {
 }
 
 .gallery-info h4 {
-    color: #333333;
+    color: #2c3e50;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
@@ -5470,7 +5470,7 @@ button[aria-busy="true"]::after {
 
 .gallery-category {
     background: rgba(0, 0, 0, 0.1);
-    color: #333333;
+    color: #2c3e50;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -5504,7 +5504,7 @@ button[aria-busy="true"]::after {
     justify-content: center;
     margin: 0 auto 1.5rem;
     font-size: 2rem;
-    color: #333333;
+    color: #2c3e50;
 }
 
 .stat-number {
@@ -5547,7 +5547,7 @@ button[aria-busy="true"]::after {
     position: absolute;
     top: 15px;
     right: 20px;
-    color: #333333;
+    color: #2c3e50;
     font-size: 2rem;
     cursor: pointer;
     z-index: 1001;
@@ -5574,7 +5574,7 @@ button[aria-busy="true"]::after {
 
 .lightbox-info {
     padding: 2rem;
-    color: #333333;
+    color: #2c3e50;
 }
 
 .lightbox-info h3 {
@@ -5593,7 +5593,7 @@ button[aria-busy="true"]::after {
     top: 50%;
     transform: translateY(-50%);
     background: rgba(255, 71, 87, 0.8);
-    color: #333333;
+    color: #2c3e50;
     border: none;
     width: 50px;
     height: 50px;
@@ -5841,13 +5841,13 @@ button[aria-busy="true"]::after {
 
 .sponsors-icon i {
     font-size: 2rem;
-    color: #333333;
+    color: #2c3e50;
 }
 
 .sponsors-intro h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: #2c3e50;
     background: linear-gradient(135deg, #ff6b6b, #f5f5f5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -5936,7 +5936,7 @@ button[aria-busy="true"]::after {
 .sponsor-info h4 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: #2c3e50;
     font-weight: 600;
 }
 
@@ -5954,7 +5954,7 @@ button[aria-busy="true"]::after {
 
 .sponsor-badge {
     background: linear-gradient(135deg, #ffd700, #ffed4e);
-    color: #333333;
+    color: #2c3e50;
     padding: 0.5rem 1rem;
     border-radius: 25px;
     font-size: 0.9rem;
@@ -5974,7 +5974,7 @@ button[aria-busy="true"]::after {
 .sponsors-cta h3 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: #2c3e50;
     background: linear-gradient(135deg, #ff6b6b, #f5f5f5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -6025,7 +6025,7 @@ button[aria-busy="true"]::after {
 
 .benefit-item span {
     font-weight: 600;
-    color: #333;
+    color: #2c3e50;
 }
 
 .sponsor-actions {

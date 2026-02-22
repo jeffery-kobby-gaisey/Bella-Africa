@@ -1,0 +1,33 @@
+{
+  "name": "bella-africa-website",
+  "version": "2.0.0",
+  "description": "Bella Africa - Empowering Women & Transforming Families Across Africa",
+  "main": "src/js/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .js",
+    "format": "prettier --write \"src/**/*.{js,css,html}\"",
+    "serve": "python -m http.server 8000"
+  },
+  "keywords": [
+    "nonprofit",
+    "africa",
+    "women-empowerment",
+    "charity"
+  ],
+  "author": "Bella Africa",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

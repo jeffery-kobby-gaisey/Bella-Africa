@@ -28,9 +28,7 @@ export default defineConfig({
         donate: resolve(__dirname, 'donate.html'),
       },
       output: {
-        manualChunks: {
-          vendor: ['intersection-observer'],
-        },
+        manualChunks: undefined,
       },
     },
     chunkSizeWarningLimit: 1000,

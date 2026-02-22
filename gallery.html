@@ -9,6 +9,7 @@
     <meta name="description"
         content="Explore our photo gallery showcasing Bella Africa's impact, community projects, and success stories across Ghana and West Africa.">
     <link rel="stylesheet" href="styles.css?v=4.2.0">
+    <link rel="stylesheet" href="gallery-projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/x-icon" href="images/logo.jpg">
@@ -68,7 +69,7 @@
         <section class="photo-gallery">
             <div class="container">
                 <div class="gallery-header">
-                    <h2 id="activeCategory">All Projects</h2>
+                    <h2 id="activeCategory">Our Projects Gallery</h2>
                     <div class="gallery-controls">
                         <button class="btn btn-outline active" onclick="changeLayout('grid', event)">
                             <i class="fas fa-th"></i> Grid
@@ -77,6 +78,12 @@
                             <i class="fas fa-th-large"></i> Masonry
                         </button>
                     </div>
+                </div>
+
+                <!-- Sewing Machine Initiative Section -->
+                <div class="project-section">
+                    <h2 class="project-title"><i class="fas fa-scissors"></i> Sewing Machine Initiative</h2>
+                    <p class="project-description">Donated 50 manual sewing machines to 50 young ladies in the central region of Ghana, enabling them to create clothing for their families and supplement their income. Maintaining the sewing machines and teaching the younger generation is the ultimate goal of Bella Africa.</p>
                 </div>
 
                 <div class="gallery-grid" id="galleryGrid">
@@ -161,6 +168,15 @@
 
 
 
+                </div>
+
+                <!-- Salt Mining Section -->
+                <div class="project-section">
+                    <h2 class="project-title"><i class="fas fa-mountain"></i> Salt Mining</h2>
+                    <p class="project-description">Supporting traditional salt mining operations and the livelihoods of workers engaged in this vital industry across Ghana.</p>
+                </div>
+
+                <div class="gallery-grid">
                     <!-- Salt Mining -->
                     <div class="gallery-item salt"
                         onclick="openLightbox('images/gallery/dsc_0043_edited.jpg', 'Salt Mining Operations', 'Workers engaged in traditional salt mining operations.')">
@@ -230,6 +246,15 @@
 
 
 
+                </div>
+
+                <!-- Gari Processing Machine Section -->
+                <div class="project-section">
+                    <h2 class="project-title"><i class="fas fa-cog"></i> Gari Processing Machine</h2>
+                    <p class="project-description">Establishing a Cassava processing machine located in a community place, allowing women to make Gari - one of the staple foods in Western Africa. This project provides sustainable income opportunities for local women.</p>
+                </div>
+
+                <div class="gallery-grid">
                     <!-- Gari Processing Machine -->
                     <div class="gallery-item gari"
                         onclick="openLightbox('images/gallery/gari_machine_community_1.jpg', 'Gari Machine Launch', 'Community members gathering at the Bella Africa Gari Processing Machine Women Empowerment project launch.')">

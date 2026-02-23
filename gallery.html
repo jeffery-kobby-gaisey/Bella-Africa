@@ -9,7 +9,6 @@
     <meta name="description"
         content="Explore our photo gallery showcasing Bella Africa's impact, community projects, and success stories across Ghana and West Africa.">
     <link rel="stylesheet" href="styles.css?v=4.2.0">
-    <link rel="stylesheet" href="gallery-projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/x-icon" href="images/logo.jpg">
@@ -34,6 +33,10 @@
                 <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
                 <li role="none"><a href="projects.html" class="nav-link" role="menuitem">Projects</a></li>
                 <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="goals.html" class="nav-link" role="menuitem">Goals</a></li>
+                <li role="none"><a href="impact.html" class="nav-link" role="menuitem">Impact</a></li>
+                <li role="none"><a href="volunteer.html" class="nav-link" role="menuitem">Get Involved</a></li>
+                <li role="none"><a href="education.html" class="nav-link" role="menuitem">Learn</a></li>
                 <li role="none"><a href="gallery.html" class="nav-link active" role="menuitem">Gallery</a></li>
                 <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
                 <li role="none"><a href="donate.html" class="nav-link donate-btn" role="menuitem"
@@ -57,19 +60,62 @@
                     <i class="fas fa-images"></i>
                     Photo Gallery
                 </div>
-                <h1 style="color: white;">Our Impact in Pictures</h1>
-                <p style="color: white;">Explore our visual journey of transformation, community empowerment, and sustainable development
+                <h1>Our Impact in Pictures</h1>
+                <p>Explore our visual journey of transformation, community empowerment, and sustainable development
                     across Ghana and West Africa.</p>
 
             </div>
         </section>
 
+        <!-- Gallery Categories / Project Filters -->
+        <section class="gallery-categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Browse by Project</h2>
+                    <p>Filter our photos by project area to see different aspects of our work</p>
+                </div>
+
+                <div class="category-filters">
+                    <button class="category-card active" onclick="filterGallery('all', event)">
+                        <div class="category-icon"><i class="fas fa-th-large"></i></div>
+                        <div class="category-info">
+                            <h3>All Projects</h3>
+                            <span class="category-count">All Photos</span>
+                        </div>
+                    </button>
+                    <button class="category-card" onclick="filterGallery('sewing', event)">
+                        <div class="category-icon"><i class="fas fa-cut"></i></div>
+                        <div class="category-info">
+                            <h3>Sewing Machine Initiative</h3>
+                            <span class="category-count">Skills &amp; Livelihood</span>
+                        </div>
+                    </button>
+                    
+
+                    <button class="category-card" onclick="filterGallery('salt', event)">
+                        <div class="category-icon"><i class="fas fa-mountain"></i></div>
+                        <div class="category-info">
+                            <h3>Salt Mining</h3>
+                            <span class="category-count">Natural Resources</span>
+                        </div>
+                    </button>
+                    <button class="category-card" onclick="filterGallery('gari', event)">
+                        <div class="category-icon"><i class="fas fa-cog"></i></div>
+                        <div class="category-info">
+                            <h3>Gari Processing Machine</h3>
+                            <span class="category-count">Food Processing</span>
+                        </div>
+                    
+
+                </div>
+            </div>
+        </section>
 
         <!-- Photo Gallery -->
         <section class="photo-gallery">
             <div class="container">
                 <div class="gallery-header">
-                    <h2 id="activeCategory">Our Projects Gallery</h2>
+                    <h2 id="activeCategory">All Projects</h2>
                     <div class="gallery-controls">
                         <button class="btn btn-outline active" onclick="changeLayout('grid', event)">
                             <i class="fas fa-th"></i> Grid
@@ -78,12 +124,6 @@
                             <i class="fas fa-th-large"></i> Masonry
                         </button>
                     </div>
-                </div>
-
-                <!-- Sewing Machine Initiative Section -->
-                <div class="project-section">
-                    <h2 class="project-title"><i class="fas fa-scissors"></i> Sewing Machine Initiative</h2>
-                    <p class="project-description">Donated 50 manual sewing machines to 50 young ladies in the central region of Ghana, enabling them to create clothing for their families and supplement their income. Maintaining the sewing machines and teaching the younger generation is the ultimate goal of Bella Africa.</p>
                 </div>
 
                 <div class="gallery-grid" id="galleryGrid">
@@ -168,15 +208,6 @@
 
 
 
-                </div>
-
-                <!-- Salt Mining Section -->
-                <div class="project-section">
-                    <h2 class="project-title"><i class="fas fa-mountain"></i> Salt Mining</h2>
-                    <p class="project-description">Supporting traditional salt mining operations and the livelihoods of workers engaged in this vital industry across Ghana.</p>
-                </div>
-
-                <div class="gallery-grid">
                     <!-- Salt Mining -->
                     <div class="gallery-item salt"
                         onclick="openLightbox('images/gallery/dsc_0043_edited.jpg', 'Salt Mining Operations', 'Workers engaged in traditional salt mining operations.')">
@@ -246,15 +277,6 @@
 
 
 
-                </div>
-
-                <!-- Gari Processing Machine Section -->
-                <div class="project-section">
-                    <h2 class="project-title"><i class="fas fa-cog"></i> Gari Processing Machine</h2>
-                    <p class="project-description">Establishing a Cassava processing machine located in a community place, allowing women to make Gari - one of the staple foods in Western Africa. This project provides sustainable income opportunities for local women.</p>
-                </div>
-
-                <div class="gallery-grid">
                     <!-- Gari Processing Machine -->
                     <div class="gallery-item gari"
                         onclick="openLightbox('images/gallery/gari_machine_community_1.jpg', 'Gari Machine Launch', 'Community members gathering at the Bella Africa Gari Processing Machine Women Empowerment project launch.')">
@@ -480,16 +502,19 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="projects.html">Our Projects</a></li>
-                        <li><a href="services.html">Healthcare</a></li>
-                        <li><a href="contact.html">Get Involved</a></li>
+                        <li><a href="impact.html">Our Impact</a></li>
+                        <li><a href="volunteer.html">Get Involved</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h3>Programs</h3>
                     <ul>
+                        <li><a href="education.html">Education</a></li>
                         <li><a href="services.html">Healthcare</a></li>
                         <li><a href="projects.html">Community Development</a></li>
+                        <li><a href="goals.html">Sustainable Goals</a></li>
+                        <li><a href="volunteer.html">Volunteer Opportunities</a></li>
                     </ul>
                 </div>
 

@@ -1460,7 +1460,7 @@ body {
 .logo {
     font-size: 1.6rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #ff4757;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -1488,7 +1488,7 @@ body {
 
 .logo-text {
     font-weight: bold;
-    background: linear-gradient(45deg, #0077B6, #27ae60);
+    background: linear-gradient(45deg, #ff4757, #ff3742);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
